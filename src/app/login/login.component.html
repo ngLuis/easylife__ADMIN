@@ -1,0 +1,10 @@
+<form class="form-signin">
+    <h1 class="h3 mb-3 font-weight-normal">Inicia sesión</h1>
+    <label for="inputEmail" class="sr-only">Correo Electrónico</label>
+    <input type="email" id="inputEmail" class="form-control" placeholder="Correo Electrónico" [(ngModel)]='user.email' name='email' required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" [(ngModel)]='user.password' name='password' required>
+    <div class="checkbox mb-3">
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" (click)='logIn()'>Iniciar Sesión</button>
+  </form>

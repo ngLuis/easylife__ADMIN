@@ -1,0 +1,9 @@
+.nav-item {
+    &:hover{
+        cursor: pointer;
+    }
+
+    &:--right{
+        margin-right: auto !important;
+    }
+}

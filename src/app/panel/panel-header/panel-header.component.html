@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" routerLink='/panel'>Admin Panel EasyLife</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink='/panel/usuarios'>Usuarios</a>
+        <a class="nav-item nav-link" routerLink='/panel/servicios'>Servicios</a>
+        <a class="nav-item nav-link" routerLink='/panel/categorias'>Categorías</a>
+        <a class="nav-item nav-link" routerLink='/panel/compras'>Compras</a>
+        <a class="nav-item nav-link" (click)='logOut()'>Cerrar Sesión</a>
+      </div>
+    </div>
+  </nav>
