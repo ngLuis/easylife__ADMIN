@@ -1,0 +1,26 @@
+<div class="row mt-5">
+    <div class="col-sm">
+        <button class="btn btn-primary" routerLink='/panel/servicios/nuevo-servicio'>Añadir nuevo</button>
+    </div>
+</div>
+
+<table class="table mt-5">
+    <thead class="table__head">
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let service of services'>
+            <th>{{ service?.id }}</th>
+            <th>{{ service?.nombre }}</th>
+            <th>{{ service?.precio }}</th>
+            <th>{{ service?.descripcion }}</th>
+            <th><button class="btn btn-link" (click)='delete(service)'>Delete</button></th>
+            <th><button class="btn btn-info" routerLink='/panel/servicios/{{service.id}}'>Update</button></th>
+        </tr>
+    </tbody>
+</table>

@@ -1,1 +1,29 @@
-<p>user-list works!</p>
+<div class="row mt-5">
+    <div class="col-sm">
+        <button class="btn btn-primary" routerLink='/panel/usuarios/nuevo-usuario'>Añadir nuevo</button>
+    </div>
+</div>
+
+<table class="table mt-5">
+    <thead class="table__head">
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Tipo</th>
+            <th>Dni</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let user of users'>
+            <th>{{ user?.id }}</th>
+            <th>{{ user?.nombre }}</th>
+            <th>{{ user?.email }}</th>
+            <th>{{ user?.type }}</th>
+            <th>{{ user?.dni }}</th>
+            <th><button class="btn btn-link" (click)='delete(user)'>Delete</button></th>
+            <th><button class="btn btn-link" (click)='generatePdf(user)'>Imprimir compras</button></th>
+            <th><button class="btn btn-info" routerLink='/panel/usuarios/{{user.id}}'>Update</button></th>
+        </tr>
+    </tbody>
+</table>

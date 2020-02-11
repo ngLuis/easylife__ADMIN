@@ -1,0 +1,24 @@
+<div class="row mt-5">
+    <div class="col-sm">
+        <button class="btn btn-primary" routerLink='/panel/categorias/nueva-categoria'>Añadir nuevo</button>
+    </div>
+</div>
+
+<table class="table mt-5">
+    <thead class="table__head">
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let category of categories'>
+            <th>{{ category?.id }}</th>
+            <th>{{ category?.nombre }}</th>
+            <th>{{ category?.descripcion }}</th>
+            <th><button class="btn btn-link" (click)='delete(category)'>Delete</button></th>
+            <th><button class="btn btn-info" routerLink='/panel/categorias/{{category.id}}'>Update</button></th>
+        </tr>
+    </tbody>
+</table>

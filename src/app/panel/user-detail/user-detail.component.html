@@ -1,0 +1,37 @@
+<div class="container">
+    <form class="mt-5">
+        <div class="form-group" *ngIf='usuario !== null '>
+          <label>Id</label>
+          <input type="text" class="form-control" id="input-id" placeholder="Id" disabled [(ngModel)]='idUsuario' name="idUsuario">
+        </div>
+        <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" class="form-control" id="input-nombre" placeholder="Nombre" [(ngModel)]='nombre' name="nombre">
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" id="input-email" placeholder="Email" [(ngModel)]='email' name="email">
+        </div>
+        <div class="form-group">
+            <label>Contraseña</label>
+            <input type="password" class="form-control" id="input-contrasenya" placeholder="Contraseña" [(ngModel)]='contrasenya' name="contrasenya">
+        </div>
+        <div class="form-group">
+            <label>DNI</label>
+            <input type="text" class="form-control" id="input-dni" placeholder="DNI" [(ngModel)]='dni' name="dni">
+        </div>
+        <select class="browser-default custom-select" (change)='optionChanged($event)'>
+          <option value="-1" [selected]='usuario === null'>Selecciona una categoria</option>
+          <option value="0" [selected]='type == 0'>Normal</option> 
+          <option value="1" [selected]='type == 1'>Admin</option>
+        </select>
+        <div class="input-group">
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="inputGroupFile01"
+                aria-describedby="inputGroupFileAddon01" (change)='fileChanged($event)'>
+              <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+            </div>
+          </div>
+    </form>
+    <button type="submit" class="btn btn-primary mt-3" (click)='saveUser()'>Guardar Cambios</button>
+</div>
