@@ -11,7 +11,7 @@ import * as jsPDF from 'jspdf';
 })
 export class UserListComponent implements OnInit {
 
-  users: UserInterface[];
+  users?: any;
 
   constructor(
     private userService: UserService,
@@ -36,7 +36,7 @@ export class UserListComponent implements OnInit {
 
   generatePdf(user) {
     const doc = new jsPDF();
-   
+
 
     this.userService.getComprasById(user.id).subscribe(response => {
       console.log(response);

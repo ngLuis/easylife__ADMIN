@@ -11,7 +11,7 @@ declare var $: any;
 })
 export class ServicesListComponent implements OnInit {
 
-  private services?: ServiceInterface[];
+  private services?: any;
 
   type: string;
 
