@@ -8,7 +8,7 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 })
 export class AuthService {
 
-  private BASEURL = 'http://localhost/api/public/api/';
+  private BASEURL = 'http://localhost:8000/api/';
   private jwtHelper: JwtHelperService = new JwtHelperService();
 
   constructor(
